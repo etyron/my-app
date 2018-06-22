@@ -1,0 +1,25 @@
+.App {
+  text-align: left;
+  max-width:600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.App h1{
+  text-align: center;
+}
+
+form{
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+input{
+  display: block;
+  height: 30px;
+  border: 2px solid #c7c7c7;
+  width: 100%;
+  margin-bottom: 25px;
+  padding-left:15px;
+}
