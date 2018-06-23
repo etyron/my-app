@@ -21,6 +21,25 @@ let UsersList = [
     }
 ];
 
+function getRandomInt() {
+    return Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+}
+
+App.post('/api/sentInfo', (req, res) => {
+    let randomId = getRandomInt();
+    UsersList.push({
+        id: randomId,
+        name: req.body.name,
+        skill: req.body.mark,
+    });
+    console.log('Peron Data is added');
+    console.log(UsersList);
+    return res.json({
+        add: true,
+        users: UsersList});
+});
+
+
 App.get('/users', (req, res) => {
     return res.json(
         UsersList
